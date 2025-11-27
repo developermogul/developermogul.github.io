@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Email Input</title>
+  <title>B ! R D</title>
   <style>
     body {
       display: flex;
@@ -20,12 +20,19 @@
       padding: 40px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #333;
     }
     input[type="email"] {
       padding: 10px;
-      width: 250px;
+      width: 100%;
       font-size: 16px;
       margin-bottom: 20px;
+      box-sizing: border-box;
     }
     button {
       padding: 10px 20px;
@@ -38,17 +45,45 @@
       color: green;
       margin-top: 20px;
     }
+    .social-icons {
+      margin-top: 30px;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      transition: transform 0.2s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.1);
+    }
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
+  <h2>Enter your email to subscribe and get updates on the game's development</h2>
   <form id="emailForm">
     <input type="email" id="emailInput" placeholder="Enter your email" required>
     <br>
-    <button type="submit">Submit</button>
+    <button type="submit">Subscribe</button>
   </form>
-  <div id="thankYou">Thank you</div>
+  <div id="thankYou">Thank you !</div>
+
+  <div class="social-icons">
+    <a href="https://www.youtube.com/birdgame3000" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    </a>
+    <a href="https://www.facebook.com/birdgame3000" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/birdgame3000" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+    </a>
+  </div>
 </div>
 
 <script>
