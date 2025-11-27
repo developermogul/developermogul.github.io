@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Input</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #thankYou {
+      display: none;
+      font-size: 18px;
+      color: green;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <form id="emailForm">
+    <input type="email" id="emailInput" placeholder="Enter your email" required>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="thankYou">Thank you</div>
+</div>
+
+<script>
+  const form = document.getElementById('emailForm');
+  const thankYouText = document.getElementById('thankYou');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const emailInput = document.getElementById('emailInput').value;
+
+    if (emailInput && emailInput.includes('@')) {
+      thankYouText.style.display = 'block';
+      form.style.display = 'none';
+    } else {
+      alert('Please enter a valid email address.');
+    }
+  });
+</script>
+
+</body>
+</html>
